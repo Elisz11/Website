@@ -22,6 +22,7 @@
                     <a href="mailto:contact@elisz11.com" class="text-lg hover:underline">contact@elisz11.com</a>
                 </div>
             </div>
+            <a href="https://colorhunt.co/palette/171717444444da0037ededed">palette</a>
         </main>
     </div>
 </template>
