@@ -15,13 +15,9 @@
 </script>
 
 <template>
-    <main>
-        <div class="flex w-full p-2 gap-2 justify-center">
-            <div>
-            </div>
-            <div v-for="link in links" :key="link.path">
-                <RouterLink :to="link.path">{{ link.name }}</RouterLink>
-            </div>
+    <main class="flex w-full p-2 gap-2 justify-center">
+        <div v-for="link in links" :key="link.path">
+            <RouterLink :to="link.path">{{ link.name }}</RouterLink>
         </div>
     </main>
 </template>
