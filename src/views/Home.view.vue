@@ -27,7 +27,7 @@
                 <div class="w-full max-w-md text-left p-4 border rounded-2xl border-neutral-700 hover:border-neutral-300 text-lg transition-all duration-300 hover:shadow-lg hover:scale-110">
                     <h1 class="text-6xl font-bold">Eli</h1>
                     <span >AKA elisz11</span>
-                    <span class="flex items-center gap-1 mt-2"><img src="../assets/images/pos.svg" class="w-5 h-5" alt="location"><span>Italy and Poland</span></span>
+                    <span class="flex items-center gap-1 mt-2"><img src="../assets/icons/pos.svg" class="w-5 h-5" alt="location"><span>Italy and Poland</span></span>
                 </div>
             </div>
 
