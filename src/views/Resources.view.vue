@@ -6,5 +6,6 @@
 
 <template>
     <NavBar />
+    
     <Footer />
 </template>
