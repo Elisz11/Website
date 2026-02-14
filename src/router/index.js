@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/notes',
       name: 'Notes',
-      component: () => import('../views/About.view.vue'),
+      component: () => import('../views/Notes.view.vue'),
     },
     {
       path: '/photos',
