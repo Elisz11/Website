@@ -2,64 +2,22 @@
     import NavBar from '../components/NavBar.component.vue'
     import Footer from '../components/Footer.component.vue'
     import { ref, onMounted } from 'vue';
-    import exifr from 'exifr';
 
     const gallery = ref([]);
-    const images = import.meta.glob('/public/photos/*.jpg', { eager: true });
+    const loading = ref(true);
 
-    const delay = (ms) => new Promise(res => setTimeout(res, ms));
-
-    const loadGallery = async () => {
-        const tempGallery = [];
-
-        for (const path in images) {
-            const url = path.replace('/public', ''); 
-            
-            try {
-                const data = await exifr.parse(url, {
-                    gps: true,
-                    timestamp: true
-                });
-
-                let placeName = "No GPS data";
-                
-                if (data?.latitude && data?.longitude) {
-                    await delay(1000); 
-                    placeName = await getPlaceName(data.latitude, data.longitude);
-                }
-
-                tempGallery.push({
-                    url,
-                    name: path.split('/').pop(),
-                    date: data?.DateTimeOriginal?.toLocaleString('it-IT') || 'N/D',
-                    lat: data?.latitude,
-                    lng: data?.longitude,
-                    place: placeName
-                });
-
-                gallery.value = [...tempGallery];
-
-            } catch (e) {
-                console.error("Error processing", url, e);
-            }
-        }
-    };
-
-    const getPlaceName = async (lat, lng) => {
-        if (!lat || !lng) return "Unknown Location";
+    onMounted(async () => {
         try {
-            const response = await fetch(
-                `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=14`,
-                { headers: { 'Accept-Language': 'en-US', 'User-Agent': 'VuePhotoApp' } }
-            );
+            const response = await fetch('/gallery.json');
             const data = await response.json();
-            return data.display_name || "Unknown Location";
-        } catch (error) {
-            return "Location name unavailable";
+            
+            gallery.value = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        } catch (e) {
+            console.error("Failed to load gallery data", e);
+        } finally {
+            loading.value = false;
         }
-    };
-
-    onMounted(loadGallery);
+    });
 </script>
 
 <template>
