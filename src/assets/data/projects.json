@@ -4,27 +4,27 @@
     "name": "Calendar",
     "description": "A school planner",
     "url": "https://github.com/Elisz11/Calendar",
-    "image": "src/assets/images/calendar.png"
+    "image": "src/assets/icons/calendar.png"
   },
   {
     "id": 2,
     "name": "Leafhold",
     "description": "An organization focused on developing Minecraft plugins",
     "url": "https://leafhold.org",
-    "image": "src/assets/images/leafhold.png"
+    "image": "src/assets/icons/leafhold.png"
   },
   {
     "id": 3,
     "name": "Discord-Bot-MC",
     "description": "Minecraft Server Status Bot",
     "url": "https://github.com/Elisz11/Discord-Bot-MC",
-    "image": "src/assets/images/bot.svg"
+    "image": "src/assets/icons/bot.svg"
   },
   {
     "id": 4,
     "name": "My scripts",
     "description": "A collection of scripts I have written for various purposes",
     "url": "https://github.com/Elisz11/scripts",
-    "image": "src/assets/images/scripts.svg"
+    "image": "src/assets/icons/scripts.svg"
   }
 ]

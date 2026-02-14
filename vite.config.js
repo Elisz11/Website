@@ -10,9 +10,10 @@ export default defineConfig({
     vue(),
     tailwindcss()
   ],
+  assetsInclude: ['**/*.md'],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
-  },
+    }
+  }
 })
