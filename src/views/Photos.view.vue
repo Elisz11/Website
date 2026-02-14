@@ -25,14 +25,16 @@
 
     <div class="flex flex-col max-w-5xl justify-center items-center">
         <div class="">
+            <div class="text-amber-500">
+                <span>Tip: click on the photo to see the location on Google Maps</span>
+            </div>
             <h1 class="text-2xl">Latest photos</h1>
             <div v-for="photo in gallery">
-                <p>📅 <strong>Date:</strong> {{ photo.date }}</p>
-                <p>📍 <strong>Place:</strong> {{ photo.place }}</p>
-                <img :src="photo.url" :alt="photo.name" class="rounded-lg w-full h-30 transition-all duration-300  hover:scale-110">
+                <p><strong>Date:</strong> {{ new Date(photo.date).toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' }) }}</p>
+                <p><strong>Place:</strong> {{ photo.place }}</p>
                 <div v-if="photo.lat">
                     <a :href="`https://www.google.com/maps/search/?api=1&query=${photo.lat},${photo.lng}`" target="_blank">
-                    View on Google Maps
+                        <img :src="photo.url" :alt="photo.name" class="rounded-lg h-50 transition-all duration-300 hover:scale-125">
                     </a>
                 </div>
             </div>

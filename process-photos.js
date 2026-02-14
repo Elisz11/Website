@@ -46,10 +46,15 @@ async function process() {
             await delay(1000);
         }
 
+        let formattedDate = null;
+        if (data?.DateTimeOriginal) {
+            formattedDate = data.DateTimeOriginal.toISOString();
+        }
+
         galleryData.push({
             filename: file,
             url: `/photos/${file}`,
-            date: data?.DateTimeOriginal ? data.DateTimeOriginal.toISOString() : null,
+            date: formattedDate,
             lat: data?.latitude || null,
             lng: data?.longitude || null,
             place: place
