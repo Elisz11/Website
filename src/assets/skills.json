@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Java",
+    "image": "src/assets/images/java.svg"
+  },
+  {
+    "id": 2,
+    "name": "Python",
+    "image": "src/assets/images/python.svg"
+  },
+  {
+    "id": 3,
+    "name": "Vue.js",
+    "image": "src/assets/images/vue.svg"
+  },
+  {
+    "id": 4,
+    "name": "TailwindCSS",
+    "image": "src/assets/images/tailwind.svg"
+  }
+]
