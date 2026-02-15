@@ -23,17 +23,20 @@
 <template>
     <NavBar />
 
-    <div class="flex flex-col max-w-5xl justify-center items-center">
-        <div class="">
-            <div class="text-amber-500">
-                <span>Tip: click on the place name to see the location on Google Maps</span>
-            </div>
+    <div class="flex flex-1 flex-col justify-center items-center">
+        <h1 class="text-5xl">My photos</h1>
+
+        <span class="text-amber-500">Tip: click on the place name to see the location on Google Maps</span>
+
+        <div class=" max-w-5xl border flex flex-col">
+
             <h1 class="text-2xl">Latest photos</h1>
-            <div v-for="photo in gallery">
-                <p>Date: {{ new Date(photo.date).toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' }) }}</p>
-                <p v-if="photo.lat">Place:<a :href="`https://www.google.com/maps/search/?api=1&query=${photo.lat},${photo.lng}`" target="_blank"> {{ photo.place }}</a></p>
-                <div>
-                    <img :src="photo.url" :alt="photo.name" class="rounded-lg h-50 transition-all duration-300 hover:scale-125">
+            <div class="flex gap-2 text-center">
+                
+                <div v-for="photo in gallery" class="flex flex-col">
+                    <a :href="photo.url" download class="transition-all duration-300 hover:scale-110"><img :src="photo.url" :alt="photo.name" class="rounded-lg h-50"></a>
+                    <p>{{ new Date(photo.date).toLocaleString('en-IT', { dateStyle: 'short', timeStyle: 'short' }) }}, <a :href="`https://www.google.com/maps/search/?api=1&query=${photo.lat},${photo.lng}`" target="_blank" class="hover:underline">{{ photo.place }}</a></p>
+                    <p v-if="photo.lat"></p>
                 </div>
             </div>
         </div>
