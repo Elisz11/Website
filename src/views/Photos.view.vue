@@ -1,10 +1,12 @@
 <script setup>
     import NavBar from '../components/NavBar.component.vue'
     import Footer from '../components/Footer.component.vue'
-    import { ref, onMounted, withDirectives } from 'vue';
+	import Photo from '../components/Photo.component.vue';
+    import { ref, onMounted, computed } from 'vue';
 
     const gallery = ref([]);
     const loading = ref(true);
+	const selectedPhoto = ref(null);
 
     onMounted(async () => {
         try {
@@ -18,27 +20,46 @@
             loading.value = false;
         }
     });
+
+
 </script>
 
 <template>
-    <NavBar />
+  	<NavBar />
+	<Photo v-if="selectedPhoto" :photo="selectedPhoto" @close="selectedPhoto = null" />
 
-    <div class="flex flex-1 flex-col justify-center items-center">
-        <h1 class="text-5xl">My photos</h1>
+  	<div class="flex-1 flex flex-col items-center justify-center">
+    	<div class="w-full max-w-5xl p-2">
+      
+			<header class="text-center">
+				<h1 class="text-5xl font-bold">My Photos</h1>
+				<p class="text-amber-500 p-2">
+				Tip: Click the place name to view on Google Maps
+				</p>
+			</header>
 
-        <span class="text-amber-500">Tip: click on the place name to see the location on Google Maps</span>
+			<section class="w-full">
+				<div class="flex items-center justify-between pb-2">
+					<h2 class="text-2xl">Archive</h2>
+					<span class="text-sm">{{ gallery.length }} items</span>
+				</div>
 
-        <div class=" max-w-5xl border flex flex-col">
-
-            <h1 class="text-2xl">Latest photos</h1>
-            <div class="flex gap-2 text-center">
-                
-                <div v-for="photo in gallery" class="flex flex-col">
-                    <a :href="photo.url" download class="transition-all duration-300 hover:scale-110"><img :src="photo.url" :alt="photo.name" class="rounded-lg h-50"></a>
-                    <p>{{ new Date(photo.date).toLocaleString('en-IT', { dateStyle: 'short', timeStyle: 'short' }) }}, <a :href="`https://www.google.com/maps/search/?api=1&query=${photo.lat},${photo.lng}`" target="_blank" class="hover:underline">{{ photo.place }}</a></p>
-                    <p v-if="photo.lat"></p>
-                </div>
-            </div>
+				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+					<div v-for="photo in gallery" :key="photo.id" class="group relative aspect-square overflow-hidden rounded-lg" @click="selectedPhoto = photo">
+						<img :src="photo.url" :alt="photo.name" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+					
+						<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+							<p class="text-white text-xs">{{ new Date(photo.date).toLocaleDateString() }}</p>
+							<a v-if="photo.place" :href="`https://www.google.com/maps/search/?api=1&query=${photo.lat},${photo.lng}`" target="_blank" class=" text-sm font-bold hover:underline ">{{ photo.place }}</a>
+							<a :href="photo.url" download class="text-white p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+							</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
         </div>
     </div>
 
