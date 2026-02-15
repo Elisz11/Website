@@ -5,7 +5,6 @@
     import { ref, onMounted, computed } from 'vue';
 
     const gallery = ref([]);
-    const loading = ref(true);
 	const selectedPhoto = ref(null);
 
     onMounted(async () => {
@@ -16,11 +15,8 @@
             gallery.value = data.sort((a, b) => new Date(b.date) - new Date(a.date));
         } catch (e) {
             console.error("Failed to load gallery data", e);
-        } finally {
-            loading.value = false;
         }
     });
-
 
 </script>
 
