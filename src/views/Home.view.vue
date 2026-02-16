@@ -41,8 +41,8 @@
     <div class="flex-1 flex flex-col items-center justify-center">
         <div class="w-full max-w-5xl p-2">
             <div class="flex gap-10 items-center justify-center w-full">
-                <img src="../assets/icons/favicon.png" class="rounded-full w-48 h-48 border-4 transition-all duration-300 hover:shadow-lg hover:scale-110">
-                <div class="w-full max-w-md text-left p-4 border rounded-2xl border-neutral-700 hover:border-neutral-300 text-lg transition-all duration-300 hover:shadow-lg hover:scale-110">
+                <img src="../assets/icons/favicon.png" class="rounded-full w-48 h-48 border-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div class="w-full max-w-md text-left p-4 border rounded-2xl border-neutral-700 hover:border-neutral-300 text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
                     <h1 class="text-6xl font-bold">Eli</h1>
                     <span >AKA elisz11</span>
                     <span class="flex items-center gap-1 mt-2"><img src="../assets/icons/pos.svg" class="w-5 h-5" alt="location"><span>Italy and Poland</span></span>
@@ -84,7 +84,7 @@
             <div class="flex flex-col items-center">
                 <h3 class="text-3xl font-bold p-4">My projects</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl px-4">
-                    <div class="border rounded-2xl p-4 border-neutral-700 hover:border-neutral-300 transition-all duration-300 hover:shadow-lg hover:scale-110" v-for="project in latestProjects" :key="project.id">
+                    <div class="border rounded-2xl p-4 border-neutral-700 hover:border-neutral-300 transition-all duration-300 hover:shadow-lg hover:scale-105" v-for="project in latestProjects" :key="project.id">
                         <a :href="project.url" target="_blank" class="flex text-left gap-3">
                             <img :src="project.image" class="h-18 w-18 object-cover rounded-lg" :alt="project.name">
                             <div class="flex flex-col">
