@@ -1,21 +1,17 @@
 
 :root {
-  --color-background: var(--vt-c-white);
+  --color-background: #ffffff;
 
-  --color-border: var(--vt-c-divider-light-2);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
+  --color-heading: #6a8eaf;
+  --color-text: #7f5539;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: rgb(23, 23, 23);
 
-    --color-heading: rgb(218, 0, 55);
-    --color-text: rgb(237, 237, 237);
+    --color-heading: #ffffff;
+    --color-text: #e6e6ea;
   }
 }
 
