@@ -20,7 +20,7 @@ const router = createRouter({
       component: () => import('../views/Blog.view.vue'),
     },
     {
-      path: 'wikis',
+      path: '/wikis',
       name: 'Wikis',
       component: () => import('../views/Wikis.view.vue'),
     },
