@@ -16,7 +16,7 @@
 
 <template>
     <main class="flex w-full p-2 gap-2 justify-center">
-        <div v-for="link in links" :key="link.path" class="hover:underline">
+        <div v-for="link in links" :key="link.path" class="hover:underline active:scale-95 transition-all">
             <RouterLink :to="link.path">{{ link.name }}</RouterLink>
         </div>
     </main>

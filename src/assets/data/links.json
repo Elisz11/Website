@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Source",
+    "url": "https://github.com/elisz11/website"
+  },
+  {
+    "id": 2,
+    "name": "Github",
+    "url": "https://github.com/elisz11"
+  },
+  {
+    "id": 3,
+    "name": "Email",
+    "url": "mailto:contact@elisz11.com"
+  },
+  {
+    "id": 4,
+    "name": "Linkedin",
+    "url": "https://www.linkedin.com/in/elia-berneri-8548b73a9/"
+  }
+]
