@@ -15,6 +15,16 @@ const router = createRouter({
       component: () => import('../views/Projects.view.vue'),
     },
     {
+      path: '/blog',
+      name: 'Blog',
+      component: () => import('../views/Blog.view.vue'),
+    },
+    {
+      path: 'wikis',
+      name: 'Wikis',
+      component: () => import('../views/Wikis.view.vue'),
+    },
+    {
       path: '/resources',
       name: 'Resources',
       component: () => import('../views/Resources.view.vue'),
