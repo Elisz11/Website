@@ -11,8 +11,9 @@
             .slice(0, 4);
     });
 
-    const latestProjects = computed(() => {
+    const featuredProjects = computed(() => {
         return [...projects]
+            .filter(project => project.featured === "true")
             .slice(0, 4);
     });
 
@@ -82,9 +83,9 @@
             </div>
 
             <div class="flex flex-col items-center">
-                <h3 class="text-3xl font-bold p-4">My projects</h3>
+                <h3 class="text-3xl font-bold p-4">Featured projects</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl px-4">
-                    <div class="border rounded-2xl p-4 border-neutral-700 hover:border-neutral-300 transition-all duration-300 hover:shadow-lg hover:scale-105" v-for="project in latestProjects" :key="project.id">
+                    <div class="border rounded-2xl p-4 border-neutral-700 hover:border-neutral-300 transition-all duration-300 hover:shadow-lg hover:scale-105" v-for="project in featuredProjects" :key="project.id">
                         <a :href="project.url" target="_blank" class="flex text-left gap-3">
                             <img :src="project.image" class="h-18 w-18 object-cover rounded-lg" :alt="project.name">
                             <div class="flex flex-col">
