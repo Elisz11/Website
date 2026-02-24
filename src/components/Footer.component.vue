@@ -15,6 +15,6 @@
 
 <template>
     <main class="flex w-full p-2 gap-2 justify-center cursor-pointer">
-        <a class="hover:underline active:scale-95 transition-all" v-for="link in links">{{ link.name }}</a>
+        <a class="hover:underline active:scale-95 transition-all" v-for="link in links" :href="link.url">{{ link.name }}</a>
     </main>
 </template>
