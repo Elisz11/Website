@@ -3,8 +3,8 @@
     import NavBar from '../components/NavBar.component.vue'
     import Footer from '../components/Footer.component.vue'
     import Photo from '../components/Photo.component.vue';
-    import skills from '../assets/skills.json';
-    import projects from '../assets/projects.json';
+    import skills from './skills.json';
+    import projects from './projects.json';
     
     const mySkills = computed(() => {
         return [...skills]
