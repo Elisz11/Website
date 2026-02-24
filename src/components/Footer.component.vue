@@ -5,7 +5,7 @@
 
     onMounted(async () => {
         try {
-            const response = await fetch('/src/assets/data/links.json');
+            const response = await fetch('/src/assets/links.json');
             const data = await response.json();
             
             links.value = data
