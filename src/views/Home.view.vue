@@ -3,8 +3,8 @@
     import NavBar from '../components/NavBar.component.vue'
     import Footer from '../components/Footer.component.vue'
     import Photo from '../components/Photo.component.vue';
-    import skills from '../assets/data/skills.json';
-    import projects from '../assets/data/projects.json';
+    import skills from '../assets/skills.json';
+    import projects from '../assets/projects.json';
     
     const mySkills = computed(() => {
         return [...skills]
@@ -42,11 +42,11 @@
     <div class="flex-1 flex flex-col items-center justify-center">
         <div class="w-full max-w-5xl p-2">
             <div class="flex gap-10 items-center justify-center w-full">
-                <img src="../assets/icons/favicon.png" class="rounded-full w-48 h-48 border-4 transition-all duration-300 hover:scale-105">
+                <img src="/icons/favicon.png" class="rounded-full w-48 h-48 border-4 transition-all duration-300 hover:scale-105">
                 <div class="w-full max-w-md text-left p-4 border rounded-2xl border-neutral-700 hover:border-neutral-300 text-lg transition-all duration-300 hover:scale-105">
                     <h1 class="text-6xl font-bold">Eli</h1>
                     <span >AKA elisz11</span>
-                    <span class="flex items-center gap-1 mt-2"><img src="../assets/icons/pos.svg" class="w-5 h-5" alt="location"><span>Italy and Poland</span></span>
+                    <span class="flex items-center gap-1 mt-2"><img src="/icons/pos.svg" class="w-5 h-5" alt="location"><span>Italy and Poland</span></span>
                 </div>
             </div>
 

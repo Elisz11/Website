@@ -2,21 +2,21 @@
   {
     "id": 1,
     "name": "Java",
-    "image": "src/assets/icons/java.svg"
+    "image": "./icons/java.svg"
   },
   {
     "id": 2,
     "name": "Python",
-    "image": "src/assets/icons/python.svg"
+    "image": "./icons/python.svg"
   },
   {
     "id": 3,
     "name": "Vue.js",
-    "image": "src/assets/icons/vue.svg"
+    "image": "./icons/vue.svg"
   },
   {
     "id": 4,
     "name": "TailwindCSS",
-    "image": "src/assets/icons/tailwind.svg"
+    "image": "./icons/tailwind.svg"
   }
 ]

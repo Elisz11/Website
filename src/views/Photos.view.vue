@@ -9,7 +9,7 @@
 
     onMounted(async () => {
         try {
-            const response = await fetch('/gallery.json');
+            const response = await fetch('src/assets/gallery.json');
             const data = await response.json();
             
             gallery.value = data.sort((a, b) => new Date(b.date) - new Date(a.date));

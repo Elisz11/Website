@@ -4,7 +4,7 @@ import exifr from 'exifr';
 import fetch from 'node-fetch';
 
 const PHOTOS_DIR = './public/photos';
-const OUTPUT_FILE = './public/gallery.json';
+const OUTPUT_FILE = 'src/assets/gallery.json';
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms));
 
@@ -53,7 +53,7 @@ async function process() {
 
         galleryData.push({
             filename: file,
-            url: `/photos/${file}`,
+            url: `./photos/${file}`,
             date: formattedDate,
             lat: data?.latitude || null,
             lng: data?.longitude || null,
