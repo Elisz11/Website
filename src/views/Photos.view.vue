@@ -3,16 +3,15 @@
     import Footer from '../components/Footer.component.vue'
 	import Photo from '../components/Photo.component.vue';
     import { ref, onMounted, computed } from 'vue';
+	import galleryData from '../assets/gallery.json';
+
 
     const gallery = ref([]);
 	const selectedPhoto = ref(null);
 
     onMounted(async () => {
         try {
-            const response = await fetch('./gallery.json');
-            const data = await response.json();
-            
-            gallery.value = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+            gallery.value = galleryData.sort((a, b) => new Date(b.date) - new Date(a.date));
         } catch (e) {
             console.error("Failed to load gallery data", e);
         }

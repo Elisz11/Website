@@ -3,8 +3,9 @@
     import NavBar from '../components/NavBar.component.vue'
     import Footer from '../components/Footer.component.vue'
     import Photo from '../components/Photo.component.vue';
-    import skills from './skills.json';
-    import projects from './projects.json';
+    import skills from '../assets/skills.json';
+    import projects from '../assets/projects.json';
+    import galleryData from '../assets/gallery.json';
     
     const mySkills = computed(() => {
         return [...skills]
@@ -22,14 +23,10 @@
 
     onMounted(async () => {
         try {
-            const response = await fetch('/gallery.json');
-            const data = await response.json();
-            
-            gallery.value = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+            gallery.value = galleryData.sort((a, b) => new Date(b.date) - new Date(a.date));
         } catch (e) {
             console.error("Failed to load gallery data", e);
         }
-
         gallery.value = gallery.value.slice(0, 4);
     });
 

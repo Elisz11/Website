@@ -1,14 +1,12 @@
 <script setup>
     import { onMounted, ref } from 'vue'
+    import linksData from '../assets/links.json';
 
     const links = ref([]);
 
     onMounted(async () => {
         try {
-            const response = await fetch('./links.json');
-            const data = await response.json();
-            
-            links.value = data
+            links.value = linksData
         } catch (e) {
             console.error("Failed to load links data", e);
         }
