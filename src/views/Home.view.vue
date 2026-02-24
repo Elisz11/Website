@@ -39,7 +39,7 @@
     <div class="flex-1 flex flex-col items-center justify-center">
         <div class="w-full max-w-5xl p-2">
             <div class="flex gap-10 items-center justify-center w-full">
-                <img src="/icons/favicon.png" class="rounded-full w-48 h-48 border-4 transition-all duration-300 hover:scale-105">
+                <img src="/favicon.png" class="rounded-full w-48 h-48 border-4 transition-all duration-300 hover:scale-105">
                 <div class="w-full max-w-md text-left p-4 border rounded-2xl border-neutral-700 hover:border-neutral-300 text-lg transition-all duration-300 hover:scale-105">
                     <h1 class="text-6xl font-bold">Eli</h1>
                     <span >AKA elisz11</span>
