@@ -100,7 +100,7 @@
             <div class="flex flex-col items-center">
                 <h3 class="text-3xl font-bold p-4">Latest notes</h3>
                 <div>
-                    In progress
+                    Work in progress
                 </div>
             </div>
 
