@@ -15,7 +15,6 @@
     const featuredProjects = computed(() => {
         return [...projects]
             .filter(project => project.featured === "true")
-            .slice(0, 4);
     });
 
     const gallery = ref([]);
