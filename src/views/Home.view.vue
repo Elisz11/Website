@@ -49,11 +49,11 @@
             <div class="flex items-center justify-center w-full p-4">
                 <div class="w-full flex justify-center">
                     <a href="https://www.last.fm/user/elisz11" target="_blank" class="hover:scale-105 transition-all duration-300">
-                    <img 
-                        src="https://lastfm-recently-played.vercel.app/api?user=elisz11&count=4" 
-                        alt="Last.fm recently played tracks" 
-                        class="rounded-2xl"
-                    />
+                        <img 
+                            src="https://lastfm-recently-played.vercel.app/api?user=elisz11&count=4" 
+                            alt="Last.fm recently played tracks" 
+                            class="rounded-2xl"
+                        />
                     </a>
                 </div>
 
