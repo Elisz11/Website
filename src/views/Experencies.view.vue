@@ -22,7 +22,7 @@
 
     <div class="flex-1 flex flex-col items-center justify-center">
         <div class="flex flex-col items-center gap-4">
-            <h3 class="text-3xl font-bold p-4">Projects</h3>
+            <h3 class="text-3xl font-bold p-4">Experencies</h3>
             <div class="w-4xl border rounded-2xl p-4 border-neutral-700 hover:border-neutral-300 transition-all duration-300 hover:shadow-lg hover:scale-105" v-for="experience in experiences" :key="experience.id">
                 <a :href="experience.url" target="_blank" class="flex text-left gap-3">
                     <div class="flex flex-col">
