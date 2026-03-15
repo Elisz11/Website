@@ -13,7 +13,7 @@ const router = createRouter({
       path: '/projects',
       name: 'Projects',
       component: () => import('../views/Projects.view.vue'),
-    },
+    },/*
     {
       path: '/experencies',
       name: 'Experencies',
@@ -23,7 +23,7 @@ const router = createRouter({
       path: '/notes',
       name: 'Notes',
       component: () => import('../views/Notes.view.vue'),
-    },
+    },*/
     {
       path: '/photos',
       name: 'Photos',
