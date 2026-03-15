@@ -57,16 +57,6 @@
                     />
                     </a>
                 </div>
-
-                <div class="w-full flex justify-center">
-                    <a href="https://steamcommunity.com/id/elisz11/" target="_blank" class="hover:scale-105 transition-all duration-300">
-                        <img
-                            src="https://steam-stat.vercel.app/api?profileName=elisz11"
-                            alt="Steam recently played games"
-                            class="rounded-2xl"
-                        />
-                    </a>
-                </div>
             </div>
 
             <div class="flex flex-col items-center w-full">
