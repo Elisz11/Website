@@ -18,11 +18,6 @@ const router = createRouter({
       path: '/experencies',
       name: 'Experencies',
       component: () => import('../views/Experencies.view.vue'),
-    },
-    {
-      path: '/notes',
-      name: 'Notes',
-      component: () => import('../views/Notes.view.vue'),
     },*/
     {
       path: '/photos',
