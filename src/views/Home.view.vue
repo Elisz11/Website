@@ -46,6 +46,30 @@
                 </div>
             </div>
 
+            <div class="flex items-center justify-center w-full p-4">
+                <div class="w-full flex justify-center">
+                    <a href="https://www.last.fm/user/elisz11" target="_blank" class="hover:scale-105 transition-all duration-300">
+                        <img 
+                            src="https://lastfm-recently-played.vercel.app/api?user=elisz11&count=4" 
+                            alt="Last.fm recently played tracks" 
+                            class="rounded-2xl"
+                            loading="lazy"
+                        />
+                    </a>
+                </div>
+
+                <div class="w-full flex justify-center">
+                    <a href="https://steamcommunity.com/id/elisz11/" target="_blank" class="hover:scale-105 transition-all duration-300">
+                        <img
+                            src="https://steam-stat-gc6pi4oh5-azizul-haque-anantos-projects.vercel.app/api?profileName=elisz11"
+                            alt="Steam recently played games"
+                            class="rounded"
+                            loading="lazy"
+                        />
+                    </a>
+                </div>
+            </div>
+
             <div class="flex flex-col items-center w-full">
                 <h3 class="text-3xl font-bold p-4">My skills</h3>
                 <section class="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 px-4">
@@ -70,13 +94,15 @@
                     </div>
                 </div>
             </div>
-
+            
+            <!--
             <div class="flex flex-col items-center">
                 <h3 class="text-3xl font-bold p-4">Latest notes</h3>
                 <div>
                     Work in progress
                 </div>
             </div>
+            -->
 
                 <div class="flex flex-col items-center">
                 <h3 class="text-3xl font-bold p-4">Latest photos</h3>
