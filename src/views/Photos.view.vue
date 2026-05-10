@@ -29,7 +29,7 @@
 			<header class="text-center">
 				<h1 class="text-5xl font-bold">My Photos</h1>
 				<p class="text-amber-500 p-2">
-				Tip: Click the place name to view on Google Maps
+				Tip: Click the place name to view it on Google Maps
 				</p>
 			</header>
 
@@ -41,7 +41,13 @@
 
 				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 					<div v-for="photo in gallery" :key="photo.id" class="group relative aspect-square overflow-hidden rounded-lg" @click="selectedPhoto = photo">
-						<img :src="photo.url" :alt="photo.name" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+						<img
+							:src="photo.url"
+							:alt="photo.name"
+							loading="lazy"
+							decoding="async"
+							class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+						/>
 					
 						<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
 							<p class="text-white text-xs">{{ new Date(photo.date).toLocaleDateString() }}</p>
